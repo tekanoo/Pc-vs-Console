@@ -870,17 +870,17 @@
           <div class="card-subtitle">RTX 5070 Ti • 4K 60–120 fps garantis</div>
         </div>
       </div>
-      <div class="card-price">1 985 €</div>
-      <div class="card-price-label">Coût d'assemblage initial (2026)</div>
+      <div class="card-price">2 620 €</div>
+      <div class="card-price-label">Coût d'assemblage initial (mai 2026)</div>
       <ul class="spec-list">
         <li><span class="spec-key">GPU</span><span class="spec-val">RTX 5070 Ti<br/><small style="color:var(--muted);font-weight:400">950 €</small></span></li>
         <li><span class="spec-key">CPU</span><span class="spec-val">Ryzen 7 9700X<br/><small style="color:var(--muted);font-weight:400">280 €</small></span></li>
-        <li><span class="spec-key">RAM</span><span class="spec-val">32 Go DDR5-6000<br/><small style="color:var(--muted);font-weight:400">85 €</small></span></li>
-        <li><span class="spec-key">Stockage</span><span class="spec-val">2 To NVMe Gen4<br/><small style="color:var(--muted);font-weight:400">105 €</small></span></li>
-        <li><span class="spec-key">Carte mère</span><span class="spec-val">MSI B850 Tomahawk<br/><small style="color:var(--muted);font-weight:400">185 €</small></span></li>
-        <li><span class="spec-key">Alimentation</span><span class="spec-val">Corsair RM850x<br/><small style="color:var(--muted);font-weight:400">120 €</small></span></li>
-        <li><span class="spec-key">Boîtier + Refroid.</span><span class="spec-val">Fractal + DeepCool<br/><small style="color:var(--muted);font-weight:400">130 €</small></span></li>
-        <li><span class="spec-key">Windows 11</span><span class="spec-val">Licence OEM<br/><small style="color:var(--muted);font-weight:400">130 €</small></span></li>
+        <li><span class="spec-key">RAM</span><span class="spec-val">32 Go DDR5-6000<br/><small style="color:var(--muted);font-weight:400">430 € <span style="color:#ff6b6b;font-size:.65rem">↑ crise NAND</span></small></span></li>
+        <li><span class="spec-key">Stockage</span><span class="spec-val">2 To NVMe Gen4<br/><small style="color:var(--muted);font-weight:400">260 € <span style="color:#ff6b6b;font-size:.65rem">↑ crise NAND</span></small></span></li>
+        <li><span class="spec-key">Carte mère</span><span class="spec-val">MSI B850 Tomahawk<br/><small style="color:var(--muted);font-weight:400">240 €</small></span></li>
+        <li><span class="spec-key">Alimentation</span><span class="spec-val">Corsair RM850x<br/><small style="color:var(--muted);font-weight:400">180 €</small></span></li>
+        <li><span class="spec-key">Boîtier + Refroid.</span><span class="spec-val">Fractal + DeepCool<br/><small style="color:var(--muted);font-weight:400">135 €</small></span></li>
+        <li><span class="spec-key">Windows 11</span><span class="spec-val">Licence OEM<br/><small style="color:var(--muted);font-weight:400">145 €</small></span></li>
         <li><span class="spec-key">Multijoueur en ligne</span><span class="spec-val">Gratuit<span class="tag-optional">Aucun abonnement</span></span></li>
         <li><span class="spec-key">Cycle de mise à jour</span><span class="spec-val">~4 ans (GPU seul)</span></li>
       </ul>
@@ -1312,7 +1312,7 @@
         <li>Rétrocompatibilité <strong>totale sur 30+ ans</strong> — toute l'histoire du jeu vidéo PC</li>
         <li>Usage polyvalent : <strong>travail, montage, création 3D, streaming</strong> — coût hardware amorti</li>
         <li>RTX 5070 Ti : <strong>DLSS 4, Frame Generation, RT complet</strong> — performances sans plafond</li>
-        <li>Changer uniquement le GPU en an 4 coûte ~800 € vs rebuild complet ~1 950 €</li>
+        <li>Changer uniquement le GPU en an 4 coûte ~800 € vs rebuild complet ~2 000 €</li>
         <li>⚠️ Hardware initial plus cher · courbe d'apprentissage pour l'assemblage</li>
       </ul>
     </div>
@@ -1354,7 +1354,7 @@
     <ul>
       <li>Prix en euros, marché français, mai 2026</li>
       <li>Une génération de console = 7 ans (moyenne historique vérifiée)</li>
-      <li>PC : upgrade GPU unique à l'an 4 (~800 €), rebuild complet à l'an 8 (~1 950 €)</li>
+      <li>PC : upgrade GPU unique à l'an 4 (~800 €), rebuild complet à l'an 8 (~2 000 €)</li>
       <li>PC : 0 € d'abonnement pour le multijoueur (Steam, battle.net, etc.)</li>
       <li>PS5 Pro : 899 € sans lecteur Blu-Ray — lecteur optionnel +119,99 €</li>
       <li>PS5 Pro : PS Plus Essential 71,99 €/an formule annuelle (obligatoire pour multijoueur)</li>
@@ -1429,7 +1429,7 @@
 // ═══════════════════════════════════════
 const PRICES = {
   pc: {
-    initial: 1985,
+    initial: 2620,
     gpuUpgrade: 800,      // RTX next gen mid-range
     rebuild: 1950,        // full rebuild year 8
     gamePrice: 30,        // average Steam
@@ -1818,7 +1818,7 @@ function updateCostBars(bd) {
 function buildTimeline() {
   const events = [
     { year: 0, side: 'both', type: 'multi', label: 'Achat initial',
-      left: 'PC Gamer : 1 985 €', leftCost: 'RTX 5070 Ti + Ryzen 7 9700X + OS',
+      left: 'PC Gamer : 2 620 €', leftCost: 'RTX 5070 Ti + Ryzen 7 9700X + OS',
       right: 'PS5 Pro : 978 € · Xbox : 664 €', rightCost: 'Console + manette (hors SSD et lecteur)' },
     { year: 1, side: 'both', type: 'multi', label: 'An 2',
       left: 'PC : +150 € (5 jeux)', leftCost: 'Abonnement : 0 €',
