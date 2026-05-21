@@ -674,6 +674,135 @@
 
     .platform-card.pc { animation: glowPulse 4s ease-in-out infinite; }
 
+    /* ─── ECOSYSTEM ─── */
+    .eco-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+      margin-bottom: 3rem;
+    }
+
+    .eco-card {
+      background: var(--bg3);
+      border: 1px solid var(--border);
+      border-radius: 1.5rem;
+      overflow: hidden;
+    }
+
+    .eco-card-hd {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 1.5rem;
+      font-weight: 800;
+      font-size: .9rem;
+    }
+
+    .eco-card-hd.pc  { background: rgba(0,212,255,0.08);  color: var(--pc); }
+    .eco-card-hd.ps5 { background: rgba(0,112,209,0.08);  color: var(--ps5-light); }
+    .eco-card-hd.xbox{ background: rgba(82,176,67,0.08);   color: var(--xbox-light); }
+
+    .eco-count-badge {
+      font-size: .68rem;
+      font-weight: 700;
+      letter-spacing: .05em;
+      text-transform: uppercase;
+      background: rgba(255,255,255,0.07);
+      padding: .2rem .6rem;
+      border-radius: 2rem;
+    }
+
+    .eco-sources {
+      padding: 1rem 1.5rem;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      flex-direction: column;
+      gap: .9rem;
+    }
+
+    .fg-row {
+      display: flex;
+      gap: .8rem;
+      align-items: flex-start;
+    }
+
+    .fg-icon {
+      font-size: 1.2rem;
+      width: 34px;
+      height: 34px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(255,255,255,0.04);
+      border-radius: 9px;
+      flex-shrink: 0;
+    }
+
+    .fg-name { font-size: .83rem; font-weight: 700; margin-bottom: .1rem; }
+
+    .fg-desc { font-size: .73rem; color: var(--muted); line-height: 1.5; }
+
+    .fg-highlight {
+      font-size: .7rem;
+      font-weight: 700;
+      margin-top: .2rem;
+      color: var(--gold);
+    }
+
+    .eco-perks {
+      padding: 1rem 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: .45rem;
+    }
+
+    .eco-perk { font-size: .8rem; color: var(--muted); line-height: 1.4; }
+
+    /* ─── FEATURE MATRIX ─── */
+    .fmatrix-wrap {
+      margin-top: 2.5rem;
+      border: 1px solid var(--border);
+      border-radius: 1.2rem;
+      overflow: hidden;
+    }
+
+    .fmatrix {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: .83rem;
+    }
+
+    .fmatrix thead tr { background: rgba(255,255,255,0.03); }
+
+    .fmatrix th {
+      padding: .9rem 1.2rem;
+      font-size: .72rem;
+      font-weight: 700;
+      letter-spacing: .09em;
+      text-transform: uppercase;
+      text-align: left;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .fmatrix th:first-child { color: var(--muted); }
+
+    .fmatrix td {
+      padding: .75rem 1.2rem;
+      border-bottom: 1px solid var(--border);
+      vertical-align: middle;
+      line-height: 1.45;
+    }
+
+    .fmatrix td:first-child { color: var(--muted); font-size: .78rem; font-weight: 600; }
+
+    .fmatrix tr:last-child td { border-bottom: none; }
+
+    .fmatrix tr:hover td { background: rgba(255,255,255,0.015); }
+
+    .badge-best { display:inline-block; font-size:.69rem; font-weight:700; padding:.18rem .5rem; border-radius:.35rem; background:rgba(82,176,67,0.18); color:var(--xbox-light); margin-right:.3rem; white-space:nowrap; }
+    .badge-mid  { display:inline-block; font-size:.69rem; font-weight:700; padding:.18rem .5rem; border-radius:.35rem; background:rgba(255,197,66,0.14); color:var(--gold);       margin-right:.3rem; white-space:nowrap; }
+    .badge-bad  { display:inline-block; font-size:.69rem; font-weight:700; padding:.18rem .5rem; border-radius:.35rem; background:rgba(255,60,60,0.12);  color:#ff6b6b;          margin-right:.3rem; white-space:nowrap; }
+
     /* progress bars */
     .progress-bar-wrap {
       background: rgba(255,255,255,0.07);
@@ -815,9 +944,245 @@
   </div>
 </section>
 
+<!-- ═══════════ SECTION 2 : ÉCOSYSTÈME ═══════════ -->
+<section id="ecosystem">
+  <div class="section-label">Écosystème & services</div>
+  <h2>Au-delà du hardware : <em>l'environnement complet</em></h2>
+  <p class="section-sub">Le hardware n'est que la surface. Chaque plateforme propose des jeux gratuits réguliers, des catalogues d'abonnement et des services qui changent radicalement la valeur réelle de votre investissement.</p>
+
+  <!-- Jeux gratuits par plateforme -->
+  <div class="eco-grid">
+
+    <!-- PC -->
+    <div class="eco-card">
+      <div class="eco-card-hd pc">
+        <span>🖥️ PC Gamer</span>
+        <span class="eco-count-badge">~150+ jeux/an gratuits</span>
+      </div>
+      <div class="eco-sources">
+        <div class="fg-row">
+          <div class="fg-icon">🎮</div>
+          <div>
+            <div class="fg-name">Epic Games Store</div>
+            <div class="fg-desc">~4 jeux offerts par semaine — sans abonnement — gardés à vie même après arrêt. Jeux AAA réguliers (GTA V, Tomb Raider, Control…)</div>
+            <div class="fg-highlight">≈ 50+ jeux/an · 0 € d'abonnement requis</div>
+          </div>
+        </div>
+        <div class="fg-row">
+          <div class="fg-icon">📦</div>
+          <div>
+            <div class="fg-name">Amazon Prime Gaming</div>
+            <div class="fg-desc">10–13 jeux PC gratuits par mois inclus dans Amazon Prime (~69,90 €/an). Gardés à vie une fois réclamés. Cyberpunk 2077, Mass Effect…</div>
+            <div class="fg-highlight">≈ 100+ jeux/an · inclus dans Prime</div>
+          </div>
+        </div>
+        <div class="fg-row">
+          <div class="fg-icon">🟦</div>
+          <div>
+            <div class="fg-name">Xbox Game Pass PC (optionnel)</div>
+            <div class="fg-desc">+500 jeux dont day-one Xbox, Bethesda, EA Play. Forza, Starfield, Elder Scrolls… Aussi accessible sur PC.</div>
+            <div class="fg-highlight">13,99 €/mois optionnel — non comptabilisé dans la simulation</div>
+          </div>
+        </div>
+      </div>
+      <div class="eco-perks">
+        <div class="eco-perk">✅ Multijoueur en ligne <strong>100% gratuit</strong> (Steam, Battle.net…)</div>
+        <div class="eco-perk">✅ <strong>Mods illimités</strong> : Nexus Mods, Steam Workshop — des milliers de mods gratuits</div>
+        <div class="eco-perk">✅ Rétrocompatibilité <strong>totale sur 30+ ans</strong> de jeux PC</div>
+        <div class="eco-perk">✅ Soldes Steam / GOG / Humble Bundle : <strong>-50% à -90%</strong> plusieurs fois/an</div>
+        <div class="eco-perk">✅ Upgradable : remplacer seulement le GPU tous les 4 ans</div>
+        <div class="eco-perk">✅ Usage polyvalent : <strong>travail, création 3D, streaming, montage vidéo</strong></div>
+        <div class="eco-perk">⚠️ Courbe d'apprentissage initiale (assemblage, drivers, config)</div>
+      </div>
+    </div>
+
+    <!-- PS5 Pro -->
+    <div class="eco-card">
+      <div class="eco-card-hd ps5">
+        <span>🎮 PlayStation 5 Pro</span>
+        <span class="eco-count-badge">3 jeux/mois inclus</span>
+      </div>
+      <div class="eco-sources">
+        <div class="fg-row">
+          <div class="fg-icon">🔵</div>
+          <div>
+            <div class="fg-name">PS Plus Essential (obligatoire online)</div>
+            <div class="fg-desc">3 jeux offerts par mois, conservés tant qu'abonné. Ex. mai 2026 : EA Sports FC 26, Wuchang: Fallen Feathers, Nine Sols.</div>
+            <div class="fg-highlight">≈ 36 jeux/an · 71,99 €/an (formule annuelle)</div>
+          </div>
+        </div>
+        <div class="fg-row">
+          <div class="fg-icon">🔵</div>
+          <div>
+            <div class="fg-name">PS Plus Extra (+54 €/an)</div>
+            <div class="fg-desc">Catalogue de 400+ jeux AAA en streaming et téléchargement : Spider-Man, God of War, Horizon, Ghost of Tsushima, Red Dead Redemption 2…</div>
+            <div class="fg-highlight">125,99 €/an total · option la plus populaire</div>
+          </div>
+        </div>
+        <div class="fg-row">
+          <div class="fg-icon">🔵</div>
+          <div>
+            <div class="fg-name">PS Plus Premium (+26 €/an vs Extra)</div>
+            <div class="fg-desc">+ classiques PS1/PS2/PS3/PSP rejouables + cloud streaming + démos exclusives.</div>
+            <div class="fg-highlight">151,99 €/an total · accès à l'histoire PlayStation</div>
+          </div>
+        </div>
+      </div>
+      <div class="eco-perks">
+        <div class="eco-perk">✅ <strong>Exclusivités majeures</strong> : Spider-Man 2, God of War Ragnarök, Horizon Forbidden West, Gran Turismo 7…</div>
+        <div class="eco-perk">✅ <strong>DualSense</strong> : retour haptique + gâchettes adaptatives (expérience unique)</div>
+        <div class="eco-perk">✅ Rétrocompat. <strong>PS4 quasi-intégrale</strong> + quelques PS3 via cloud (Premium)</div>
+        <div class="eco-perk">✅ PS5 Pro : GPU 45% plus puissant que PS5 standard, meilleur ray tracing</div>
+        <div class="eco-perk">⚠️ Jeux PS Plus <strong>perdus</strong> si désabonnement</div>
+        <div class="eco-perk">❌ <strong>Mods inexistants</strong> · Prix jeux AAA parmi les plus élevés (~79,99 €)</div>
+        <div class="eco-perk">❌ <strong>Sans lecteur Blu-Ray</strong> par défaut (PS5 Pro) — +119,99 € l'accessoire</div>
+      </div>
+    </div>
+
+    <!-- Xbox Series X -->
+    <div class="eco-card">
+      <div class="eco-card-hd xbox">
+        <span>🟢 Xbox Series X</span>
+        <span class="eco-count-badge">500+ jeux catalogue</span>
+      </div>
+      <div class="eco-sources">
+        <div class="fg-row">
+          <div class="fg-icon">🟢</div>
+          <div>
+            <div class="fg-name">Game Pass Ultimate (obligatoire online)</div>
+            <div class="fg-desc">+500 jeux dont 4–5 sorties day-one Xbox/Bethesda/EA par mois. Ex. mai 2026 : Forza Horizon 6 (92/100 Metacritic) disponible dès sa sortie.</div>
+            <div class="fg-highlight">≈ 500+ jeux accès immédiat · 251,88 €/an (20,99 €/mois)</div>
+          </div>
+        </div>
+        <div class="fg-row">
+          <div class="fg-icon">☁️</div>
+          <div>
+            <div class="fg-name">xCloud — Cloud Gaming inclus</div>
+            <div class="fg-desc">Jouez aux jeux Game Pass sur smartphone, tablette ou navigateur. Aucun hardware supplémentaire requis.</div>
+            <div class="fg-highlight">Inclus dans Ultimate · pas de TV requise</div>
+          </div>
+        </div>
+        <div class="fg-row">
+          <div class="fg-icon">🖥️</div>
+          <div>
+            <div class="fg-name">PC Game Pass inclus dans Ultimate</div>
+            <div class="fg-desc">Tous les jeux Xbox jouables aussi sur PC Windows. Flexibilité totale console + PC avec un seul abonnement.</div>
+            <div class="fg-highlight">Une seule licence · console + PC</div>
+          </div>
+        </div>
+      </div>
+      <div class="eco-perks">
+        <div class="eco-perk">✅ <strong>Rétrocompatibilité complète</strong> : Xbox original → 360 → One → Series X</div>
+        <div class="eco-perk">✅ <strong>Day-one Microsoft + Bethesda + EA Play</strong> inclus dans le catalogue</div>
+        <div class="eco-perk">✅ xCloud : jouer <strong>sans console ni TV</strong> (mobile, tablette, navigateur)</div>
+        <div class="eco-perk">✅ PC Game Pass inclus : même jeux sur console <strong>et</strong> PC</div>
+        <div class="eco-perk">⚠️ Jeux Game Pass <strong>perdus</strong> si arrêt de l'abonnement</div>
+        <div class="eco-perk">⚠️ Moins d'exclusivités "system seller" que PlayStation</div>
+        <div class="eco-perk">❌ Game Pass Ultimate parmi les <strong>abonnements les plus chers</strong> du marché (251,88 €/an)</div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Feature Matrix -->
+  <div class="section-label" style="margin-bottom:.75rem">Comparatif fonctionnel</div>
+  <div class="fmatrix-wrap">
+    <table class="fmatrix">
+      <thead>
+        <tr>
+          <th>Critère</th>
+          <th style="color:var(--pc)">🖥️ PC Gamer</th>
+          <th style="color:var(--ps5-light)">🎮 PS5 Pro</th>
+          <th style="color:var(--xbox-light)">🟢 Xbox Series X</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Jeux gratuits / an</td>
+          <td><span class="badge-best">150+</span> Epic + Prime Gaming</td>
+          <td><span class="badge-mid">36</span> PS Plus Essential</td>
+          <td><span class="badge-best">500+</span> catalogue Game Pass</td>
+        </tr>
+        <tr>
+          <td>Multijoueur en ligne</td>
+          <td><span class="badge-best">Gratuit</span> sans abonnement</td>
+          <td><span class="badge-bad">Payant</span> 71,99 €/an</td>
+          <td><span class="badge-bad">Payant</span> inclus GP 251,88 €/an</td>
+        </tr>
+        <tr>
+          <td>Jeux new release prix</td>
+          <td><span class="badge-best">~30 €</span> prix moyen Steam</td>
+          <td><span class="badge-bad">~79,99 €</span> prix day-one</td>
+          <td><span class="badge-best">0 €</span> inclus Game Pass</td>
+        </tr>
+        <tr>
+          <td>Mods communautaires</td>
+          <td><span class="badge-best">Illimités</span> Nexus, Workshop</td>
+          <td><span class="badge-bad">Inexistants</span></td>
+          <td><span class="badge-bad">Inexistants</span></td>
+        </tr>
+        <tr>
+          <td>Rétrocompatibilité</td>
+          <td><span class="badge-best">Totale</span> 30+ ans de jeux PC</td>
+          <td><span class="badge-mid">PS4</span> quasi-intégrale</td>
+          <td><span class="badge-best">Complète</span> Xbox → 360 → One</td>
+        </tr>
+        <tr>
+          <td>Exclusivités majeures</td>
+          <td><span class="badge-mid">Aucune</span> tout multi-plateforme</td>
+          <td><span class="badge-best">Fortes</span> Sony 1st party</td>
+          <td><span class="badge-mid">Limitées</span> aussi sur PC</td>
+        </tr>
+        <tr>
+          <td>Cloud gaming</td>
+          <td><span class="badge-mid">GeForce NOW</span> payant séparé</td>
+          <td><span class="badge-mid">PS Premium</span> +26 €/an</td>
+          <td><span class="badge-best">xCloud inclus</span> Game Pass</td>
+        </tr>
+        <tr>
+          <td>Résolution / fréquence max</td>
+          <td><span class="badge-best">8K / 165Hz+</span> sans limite</td>
+          <td><span class="badge-mid">4K / 120Hz</span></td>
+          <td><span class="badge-mid">4K / 120Hz</span></td>
+        </tr>
+        <tr>
+          <td>Ray Tracing / DLSS</td>
+          <td><span class="badge-best">Complet</span> DLSS 4, Frame Gen</td>
+          <td><span class="badge-mid">Partiel</span> RT limité</td>
+          <td><span class="badge-mid">Partiel</span> RT limité</td>
+        </tr>
+        <tr>
+          <td>Upgradabilité</td>
+          <td><span class="badge-best">Totale</span> GPU, RAM, SSD séparément</td>
+          <td><span class="badge-bad">Aucune</span> boîte fermée</td>
+          <td><span class="badge-bad">Aucune</span> boîte fermée</td>
+        </tr>
+        <tr>
+          <td>Usage hors gaming</td>
+          <td><span class="badge-best">Complet</span> travail, création, stream</td>
+          <td><span class="badge-bad">Gaming uniquement</span></td>
+          <td><span class="badge-bad">Gaming uniquement</span></td>
+        </tr>
+        <tr>
+          <td>Facilité d'utilisation</td>
+          <td><span class="badge-mid">Intermédiaire</span> config initiale</td>
+          <td><span class="badge-best">Plug &amp; Play</span></td>
+          <td><span class="badge-best">Plug &amp; Play</span></td>
+        </tr>
+        <tr>
+          <td>Expérience manette unique</td>
+          <td><span class="badge-mid">Standard</span> Xbox/PS compatible</td>
+          <td><span class="badge-best">DualSense</span> haptique + gâchettes</td>
+          <td><span class="badge-mid">Standard</span> confort ergonomique</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
 <hr class="divider" />
 
-<!-- ═══════════ SECTION 2 : SIMULATEUR ═══════════ -->
+<!-- ═══════════ SECTION 3 : SIMULATEUR ═══════════ -->
 <section id="simulator">
   <div class="section-label">Simulation interactive</div>
   <h2>Calculez votre <em>vrai coût</em></h2>
@@ -940,36 +1305,45 @@
     <div class="verdict-card pc">
       <div class="vc-title" style="color:var(--pc)">🖥️ PC — Meilleur investissement long terme</div>
       <ul class="vc-pros">
-        <li>Pas d'abonnement obligatoire pour jouer en ligne (Steam multijoueur gratuit)</li>
-        <li>Jeux moins chers en moyenne (soldes Steam, Epic, Humble Bundle)</li>
-        <li>Bibliothèque de jeux permanente et compatible rétroactivement</li>
-        <li>Usage polyvalent : travail, création, streaming — coût amorti</li>
-        <li>Upgradeabilité : changer seulement le GPU sauve 1 000–1 200 € vs rebuild</li>
-        <li>Résolutions, mods, taux de rafraîchissement sans restriction</li>
+        <li><strong>0 € d'abonnement</strong> pour jouer en ligne — multijoueur Steam gratuit</li>
+        <li><strong>~150+ jeux gratuits/an</strong> via Epic Games Store + Amazon Prime Gaming, sans abo gaming</li>
+        <li>Prix jeux moyen <strong>~30 €</strong> (soldes Steam -90%, clés, Humble Bundle)</li>
+        <li><strong>Mods illimités</strong> : des milliers de mods gratuits transforment les jeux</li>
+        <li>Rétrocompatibilité <strong>totale sur 30+ ans</strong> — toute l'histoire du jeu vidéo PC</li>
+        <li>Usage polyvalent : <strong>travail, montage, création 3D, streaming</strong> — coût hardware amorti</li>
+        <li>RTX 5070 Ti : <strong>DLSS 4, Frame Generation, RT complet</strong> — performances sans plafond</li>
+        <li>Changer uniquement le GPU en an 4 coûte ~800 € vs rebuild complet ~1 950 €</li>
+        <li>⚠️ Hardware initial plus cher · courbe d'apprentissage pour l'assemblage</li>
       </ul>
     </div>
 
     <div class="verdict-card ps5">
-      <div class="vc-title" style="color:var(--ps5-light)">🎮 PS5 — Pour les exclusivités Sony</div>
+      <div class="vc-title" style="color:var(--ps5-light)">🎮 PS5 Pro — Pour les exclusivités Sony & l'expérience premium</div>
       <ul class="vc-pros">
-        <li>Exclusivités majeures : God of War, Spider-Man, Horizon, Ghost of Tsushima</li>
-        <li>Investissement initial le plus bas des trois plateformes</li>
-        <li>Simplicité d'utilisation, plug-and-play sans configuration</li>
-        <li>PS Plus requis pour le multijoueur (~72 €/an, formule annuelle)</li>
-        <li>Les jeux AAA sont plus chers et les soldes moins fréquentes</li>
-        <li>Idéal si vous avez déjà un PC bureautique ou un abonnement PS Now</li>
+        <li><strong>Exclusivités Sony irremplaçables</strong> : Spider-Man 2, God of War, Horizon, Gran Turismo</li>
+        <li><strong>DualSense</strong> : retour haptique + gâchettes adaptatives — expérience sensorielle unique</li>
+        <li>PS5 Pro : GPU <strong>45% plus puissant</strong> que PS5 standard, meilleur ray tracing</li>
+        <li>PS Plus Essential : <strong>3 jeux AAA offerts/mois</strong> (≈36/an) · ex. EA FC 26, Wuchang (mai 2026)</li>
+        <li>PS Plus Extra (125,99 €/an) : <strong>400+ jeux en catalogue</strong> dont tous les exclusifs Sony</li>
+        <li>Plug &amp; Play complet : <strong>zéro configuration</strong> — brancher et jouer immédiatement</li>
+        <li>⚠️ Jeux AAA à <strong>79,99 € day-one</strong> · sans lecteur Blu-Ray par défaut (+119,99 €)</li>
+        <li>⚠️ Mods inexistants · jeux PS Plus perdus à l'arrêt de l'abonnement</li>
+        <li>⚠️ Hardware fermé : aucune upgrade possible, rétrocompat. PS4 uniquement</li>
       </ul>
     </div>
 
     <div class="verdict-card xbox">
-      <div class="vc-title" style="color:var(--xbox-light)">🟢 Xbox — Meilleur rapport valeur/contenu</div>
+      <div class="vc-title" style="color:var(--xbox-light)">🟢 Xbox — Meilleur catalogue, flexibilité maximale</div>
       <ul class="vc-pros">
-        <li>Game Pass Ultimate : +400 jeux inclus dont les day-one Microsoft</li>
-        <li>Tous les jeux Xbox sont aussi sur PC via Game Pass — flexibilité totale</li>
-        <li>Coût mensuel prévisible (~21 €/mois tout inclus)</li>
-        <li>Idéal pour les joueurs qui essaient beaucoup de titres différents</li>
-        <li>Obligation : le Game Pass devient cher si vous l'utilisez peu</li>
-        <li>Moins d'exclusivités "système" que PlayStation</li>
+        <li><strong>500+ jeux day-one inclus</strong> : Forza Horizon 6 (92/100), Halo, Starfield, Bethesda…</li>
+        <li><strong>xCloud inclus</strong> : jouer sur smartphone, tablette ou navigateur sans TV</li>
+        <li>PC Game Pass inclus : mêmes jeux sur <strong>console ET PC</strong> avec un seul abonnement</li>
+        <li>Rétrocompatibilité <strong>complète 4 générations</strong> : Xbox original → 360 → One → Series X</li>
+        <li>Plug &amp; Play : <strong>zéro configuration</strong>, interface simple et claire</li>
+        <li>Idéal pour les joueurs qui <strong>explorent beaucoup de titres</strong> sans les acheter</li>
+        <li>⚠️ <strong>Game Pass à 251,88 €/an</strong> — coûteux si sous-utilisé</li>
+        <li>⚠️ Moins d'exclusivités "system seller" — tous les jeux Xbox disponibles sur PC</li>
+        <li>⚠️ Bibliothèque Game Pass <strong>perdue</strong> à l'arrêt de l'abonnement</li>
       </ul>
     </div>
   </div>
